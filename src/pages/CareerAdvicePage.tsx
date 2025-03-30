@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Search, Calendar, MessageSquare, User, ThumbsUp, BookOpen, FileText } from "lucide-react";
+import { Search, Calendar, MessageSquare, ThumbsUp, BookOpen, FileText } from "lucide-react";
 import MainLayout from "@/components/MainLayout";
 
 // Demo articles data

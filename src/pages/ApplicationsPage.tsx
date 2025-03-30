@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Building, MapPin, Calendar, CheckCircle, XCircle, AlertCircle, FileText } from "lucide-react";
+import { Clock, Building, MapPin, Calendar, FileText } from "lucide-react";
 import MainLayout from "@/components/MainLayout";
 
 // Demo application data
@@ -206,6 +206,7 @@ const ApplicationsPage = () => {
                   description="You haven't applied to any jobs yet. Start exploring available jobs and apply today!"
                   actionLabel="Browse Jobs"
                   actionLink="/jobs"
+                  actionHref={null}
                 />
               )}
             </div>
@@ -219,6 +220,7 @@ const ApplicationsPage = () => {
                     key={application.id} 
                     application={application} 
                     archived
+                    onArchive={() => {}} // Empty function to satisfy the prop requirement
                   />
                 ))
               ) : (
@@ -228,6 +230,7 @@ const ApplicationsPage = () => {
                   description="You don't have any archived job applications. Applications that are rejected or that you archive will appear here."
                   actionLabel="View Active Applications"
                   actionHref="#active"
+                  actionLink={null}
                 />
               )}
             </div>
@@ -250,6 +253,7 @@ const ApplicationsPage = () => {
                   description="You haven't saved any jobs yet. Browse jobs and save the ones that interest you for later application."
                   actionLabel="Browse Jobs"
                   actionLink="/jobs"
+                  actionHref={null}
                 />
               )}
             </div>
