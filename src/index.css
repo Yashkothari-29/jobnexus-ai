@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,24 +31,17 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,7 +55,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -79,6 +73,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +92,43 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .job-card {
+    @apply relative border rounded-lg p-5 bg-white hover:shadow-md transition-all duration-300;
+  }
+
+  .job-card-title {
+    @apply text-lg font-semibold text-gray-900 line-clamp-1;
+  }
+
+  .job-card-company {
+    @apply flex items-center gap-1 text-sm text-gray-600 font-medium mb-3;
+  }
+
+  .job-card-detail {
+    @apply flex items-center gap-1 text-sm text-gray-500;
+  }
+
+  .job-tag {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .job-tag-primary {
+    @apply bg-blue-100 text-job-blue;
+  }
+
+  .job-tag-success {
+    @apply bg-green-100 text-job-success;
+  }
+
+  .job-tag-warning {
+    @apply bg-amber-100 text-job-warning;
+  }
+
+  .search-input {
+    @apply w-full border-0 bg-transparent py-1.5 pl-10 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6;
   }
 }
